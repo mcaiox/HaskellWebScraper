@@ -27,9 +27,10 @@ source-repository head
 
 library
   exposed-modules:
-      Database
+      ScraperDatabase
       HTTP
       Parser
+      TweetDataTypes
   other-modules:
       Paths_webscraper
   hs-source-dirs:
@@ -41,6 +42,8 @@ library
     , HTTP
     , bytestring
     , tagsoup
+    , HDBC
+    , HDBC-sqlite3
   default-language: Haskell2010
 
 executable webscraper-exe
@@ -58,6 +61,8 @@ executable webscraper-exe
     , HTTP
     , bytestring
     , tagsoup
+    , HDBC
+    , HDBC-sqlite3
   default-language: Haskell2010
 
 test-suite webscraper-test

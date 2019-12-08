@@ -9,17 +9,7 @@ import System.Exit
 import System.IO
 import Text.HTML.TagSoup
 import Data.Char
-
-type Content = String
-type Author = String
-type Likes = String
-type Shares = String
-
-data Tweet = Tweet Likes Author Content Shares
-             deriving (Show)
-
-data TypedTweet = TypedTweet String String Int Int
-                  deriving (Show)
+import TweetDataTypes
 
 parse :: String -> [TypedTweet]
 parse a = createTypedTweets cleanedTweets
